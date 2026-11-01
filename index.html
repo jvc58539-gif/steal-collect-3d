@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#10251d">
+  <title>Steal & Collect 3D</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="game"></div>
+
+  <section id="lobby" class="panel">
+    <h1>STEAL & COLLECT</h1>
+    <p class="sub">3D multiplayer arena · Up to 8 players</p>
+    <input id="player-name" maxlength="20" placeholder="Your player name" value="Player">
+    <div class="row">
+      <button id="create-room">Create Room</button>
+    </div>
+    <div class="row">
+      <input id="room-code" maxlength="6" placeholder="ROOM CODE" autocomplete="off">
+      <button id="join-room">Join</button>
+    </div>
+    <p id="lobby-status">Starting offline practice is also available.</p>
+    <button id="play-offline" class="secondary">Play Offline</button>
+  </section>
+
+  <section id="hud" class="hidden">
+    <div class="hud-top">
+      <span id="room-label">Offline</span>
+      <span id="coins">Coins: 0</span>
+      <span id="players-label">Players: 1/8</span>
+    </div>
+    <div id="notice">Collect glowing eggs!</div>
+    <div id="help">Move: joystick · Jump: JUMP · Collect: COLLECT</div>
+  </section>
+
+  <div id="joystick" class="control"><div id="stick"></div></div>
+  <div id="buttons">
+    <button id="jump" class="game-btn">JUMP</button>
+    <button id="run" class="game-btn">RUN</button>
+    <button id="collect" class="game-btn">COLLECT</button>
+    <button id="shop" class="game-btn">SHOP</button>
+  </div>
+
+  <section id="shop-panel" class="panel hidden">
+    <h2>Egg Shop</h2>
+    <p>Buy a mystery egg for 25 coins.</p>
+    <button id="buy-egg">Buy Egg · 25</button>
+    <button id="close-shop" class="secondary">Close</button>
+  </section>
+
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
